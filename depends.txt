@@ -1,0 +1,23 @@
+1. tf2_sensor_msgs
+2. mrpt: sudo add-apt-repository ppa:joseluisblancoc/mrpt
+	sudo apt update
+	sudo apt install libmrpt-dev mrpt-apps
+
+3. orocos-bfl: apt-get install liborocos-bfl-dev
+
+4. geographic_msgs : apt-get install ros-noetic-geographic-msgs
+
+5. GeographicLib : apt-get install geographiclib-tools
+6. GeographicLib : apt-get install libgeographic-dev
+
+7. csm : apt-get install ros-noetic-csm
+
+8. geodesy : apt-get install ros-noetic-geodesy
+
+9. nmea_msgs : pt-get install ros-noetic-nmea-msgs
+
+10. apt-get install ros-noetic-pcl-ros ros-noetic-libg2o
+
+11. sdl : apt-get install libsdl-image1.2-dev
+
+12. sudo apt-get install libmosquitto-dev

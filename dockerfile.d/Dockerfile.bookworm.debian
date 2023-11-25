@@ -1,0 +1,8 @@
+FROM debian:bookworm
+RUN sh -c "sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list.d/debian.sources"
+RUN apt update
+RUN apt upgrade -y
+RUN apt install ssh -y
+RUN sh -c "echo 'root\nroot\n'|passwd root"
+RUN sh -c "sed -i '/^#PermitRootLogin prohibit-password$/iPermitRootLogin yes' /etc/ssh/sshd_config"
+CMD [ "/sbin/init" ]

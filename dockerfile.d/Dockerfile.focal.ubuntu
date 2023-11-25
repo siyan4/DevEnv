@@ -1,0 +1,9 @@
+FROM ubuntu:focal
+RUN sh -c "sed -i 's/ports.ubuntu.com/mirrors.ustc.edu.cn/g' /etc/apt/sources.list"
+RUN apt update
+RUN apt upgrade -y
+RUN apt install ssh -y
+RUN sh -c "echo y | unminimize"
+RUN sh -c "echo 'root\nroot\n'|passwd root"
+RUN sh -c "sed -i '/^#PermitRootLogin prohibit-password$/iPermitRootLogin yes' /etc/ssh/sshd_config"
+CMD [ "/sbin/init" ]
