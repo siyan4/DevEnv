@@ -59,7 +59,7 @@ gunzip devos-arm64.debian.tar.gz
 docker load -i devos-arm64.debian.tar
 touch ~/.config/hostname-devos
 
-docker run --privileged --cap-add CAP_NET_RAW --name DevEnv --network bridge -dit -p 10022:22 -p 2345:2345 -h devos --env DISPLAY=unix:1 --env GDK_DPI_SCALE= --env GDK_SCALE= --pull missing -u root -v ~/.config/hostname-devos:/etc/hostname -v /usr/bin/qemu-aarch64-static:/usr/bin/qemu-aarch64-static -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/Projects:/home/ubt/Projects localhost/debian:devos-arm64
+docker run --privileged --cap-add CAP_NET_RAW --name DevEnv --network bridge -dit -p 10022:22 -p 2345:2345 -h devos --env DISPLAY=unix:1 --env GDK_DPI_SCALE= --env GDK_SCALE= --pull missing -u root -v /usr/bin/qemu-aarch64-static:/usr/bin/qemu-aarch64-static -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/Projects:/home/uqi/Projects localhost/debian:devos-arm64
 
 # 连接容器方式
 # 方式一：Attach
