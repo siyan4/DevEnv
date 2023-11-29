@@ -1,1 +1,1 @@
-Dockerfile.focal.ubuntu
+Dockerfile.bookworm.debian
